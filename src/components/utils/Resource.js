@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 
 class Resource extends Component { 
     state = { loading: true, error: false }
-    async componentDidMount() { 
+    
+    componentDidMount() { 
+        this.fetchRescource();
+    }
+
+     async fetchRescource() {
         try {
             const response = await this.props.fetch(); 
             this.setState({ response, loading: false }); 

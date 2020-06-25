@@ -5,9 +5,9 @@ import Resource from '../utils/Resource';
 
 class Pokemon extends Component { 
     
-
+    
     render() { 
-        const name = this.props.match.params.name;
+        const { name } = this.props.match.params;
         return (
             <Resource 
                 fetch={() => api.getPokemonByName(name)} 
