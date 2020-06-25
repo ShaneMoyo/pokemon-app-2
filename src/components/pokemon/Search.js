@@ -14,7 +14,7 @@ class Search extends Component {
         this.props.history.push(`/pokemon/${this.state.query}`)
     }
     render() { 
-        const { query} = this.state; 
+        const { query } = this.state; 
         return (
             <form onSubmit={event => this.handleSubmit(event)}>
                 <fieldset>
