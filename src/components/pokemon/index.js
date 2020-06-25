@@ -13,7 +13,7 @@ export default class PokemonContainer extends Component {
                 <h1>Pokemon</h1>
                 <Search/> 
                 <Switch> 
-                    <Route exact path="/pokemon/:id" component={Pokemon}/>
+                    <Route exact path="/pokemon/:name" component={Pokemon}/>
                 </Switch>
             </section>
         );

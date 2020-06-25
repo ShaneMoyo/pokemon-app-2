@@ -10,7 +10,6 @@ class Search extends Component {
 
     handleSubmit = event => { 
         event.preventDefault(); 
-        console.log('query: ', this.state.query); 
         this.props.history.push(`/pokemon/${this.state.query}`)
     }
     render() { 
