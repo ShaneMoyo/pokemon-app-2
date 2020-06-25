@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -12,19 +12,28 @@ function App() {
   const About = () => (
     <section>
       <h1>About my pokemon app</h1>
-      <p>Welcome to my pokemon app were I play around with components and breack stuff</p>
+      <p>Welcome to my pokemon app were I play around with components and break stuff</p>
+    </section>
+  )
+
+  const Home = () => (
+    <section>
+      <h1>Welcome to the HOME PAGE!!!!</h1>
+      <p>YAAAAAA!!!!</p>
     </section>
   )
   return (
     <div className="App">
-      <nav>
-        <Link to="/">Home</Link>  
-        <Link to="/About">About</Link>  
-      </nav> 
       <Router>
+        <nav>
+          <Link to="/">Home</Link>  
+          <Link to="/pokemon">pokemon</Link>  
+          <Link to="/About">About</Link>  
+        </nav> 
         <Switch> 
           <Route path="/about" render={() => <About/>}/>  
-          <Route path="/" component={PokemonContainer}/>
+          <Route path="/pokemon" component={PokemonContainer}/>
+          <Route path="/" component={() => <Home/>}/>
         </Switch>
       </Router>
       
