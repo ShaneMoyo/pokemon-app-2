@@ -9,7 +9,7 @@ export default class PokemonContainer extends Component {
 
     render() { 
         return (
-            <section>
+            <section style={{ padding: '10px', width: '80%', backgroundColor: 'white', margin: 'auto', borderRadius: '20px'}}>
                 <h1>Pokemon</h1>
                 <Search/> 
                 <Switch> 

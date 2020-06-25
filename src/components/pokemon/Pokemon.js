@@ -28,10 +28,10 @@ class Pokemon extends Component {
                         ); 
                     } else if(pokemon){ 
                         return (
-                            <section>
+                            <>
                                 <h1>We got ourselves a {pokemon.name}</h1>  
                                 <Picture url={pokemon.sprites.front_default}/>
-                            </section>
+                            </>
                         )
                     }
                 }}/>
