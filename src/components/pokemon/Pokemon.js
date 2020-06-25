@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import api from '../../services/pokemonAPI';
 import Resource from '../utils/Resource'; 
 
+import Picture from '../utils/Picture'; 
+
 class Pokemon extends Component { 
     
     
@@ -28,7 +30,7 @@ class Pokemon extends Component {
                         return (
                             <section>
                                 <h1>We got ourselves a {pokemon.name}</h1>  
-                                <img alt="pkmn" src={pokemon.sprites.front_default}/>
+                                <Picture url={pokemon.sprites.front_default}/>
                             </section>
                         )
                     }
