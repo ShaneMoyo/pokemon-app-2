@@ -1,23 +1,20 @@
 import React, { Component } from 'react'; 
+import { withRouter } from 'react-router-dom'; 
 
-export default class Search extends Component { 
-    constructor() {
-        super(); 
-        this.state = {
-            query: ''
-        }
+class Search extends Component { 
+    state = {
+        query: '', 
     }
 
-    handleChange = query => { 
-        this.setState({ query }); 
-    }
+    handleChange = query => this.setState({ query }); 
 
     handleSubmit = event => { 
         event.preventDefault(); 
         console.log('query: ', this.state.query); 
+        this.props.history.push(`/pokemon/${this.state.query}`)
     }
     render() { 
-        const { query } = this.state; 
+        const { query} = this.state; 
         return (
             <form onSubmit={event => this.handleSubmit(event)}>
                 <fieldset>
@@ -25,6 +22,8 @@ export default class Search extends Component {
                     <button type="submit">Search</button>
                 </fieldset>
             </form>
-        )
+        )    
     }
 }
+
+export default withRouter(Search)
