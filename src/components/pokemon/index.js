@@ -1,4 +1,5 @@
 import React, { Component } from 'react'; 
+import Search from './Search';
 
 export default class PokemonContainer extends Component { 
 
@@ -6,6 +7,7 @@ export default class PokemonContainer extends Component {
         return (
             <section>
                 <h1>Pokemon</h1>
+                <Search/> 
             </section>
         );
     }
