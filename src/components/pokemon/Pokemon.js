@@ -31,6 +31,8 @@ class Pokemon extends Component {
                             <>
                                 <h1>We got ourselves a {pokemon.name}</h1>  
                                 <Picture url={pokemon.sprites.front_default}/>
+                                <Picture url={pokemon.sprites.front_shiny}/>
+                                <Picture url={pokemon.sprites.back_default}/>
                             </>
                         )
                     }
